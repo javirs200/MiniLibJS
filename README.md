@@ -1,5 +1,7 @@
 # MiniLibJS
 
+#no es lo mas bonito del mundo pero el DOM esta dominao XD
+
 Ejercicio con arrays, objetos, manejo del DOM
 
 Dado el siguiente array de objetos, pintar en el DOM tarjetas con los detalles de los siguientes libros. 
