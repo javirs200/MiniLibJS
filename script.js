@@ -4,7 +4,7 @@ const books = [
     {
         "author": "Chinua Achebe",
         "country": "Nigeria",
-        "imageLink": "images/things-fall-apart.jpg",
+        "imageLink": "images/thingsFallApart.jpg",
         "language": "English",
         "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
         "pages": 209,
@@ -14,7 +14,7 @@ const books = [
     {
         "author": "Hans Christian Andersen",
         "country": "Denmark",
-        "imageLink": "images/fairy-tales.jpg",
+        "imageLink": "images/fairyTales.jpg",
         "language": "Danish",
         "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
         "pages": 784,
@@ -24,7 +24,7 @@ const books = [
     {
         "author": "Dante Alighieri",
         "country": "Italy",
-        "imageLink": "images/the-divine-comedy.jpg",
+        "imageLink": "images/theDivineComedy.jpg",
         "language": "Italian",
         "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
         "pages": 928,
@@ -34,7 +34,7 @@ const books = [
     {
         "author": "Unknown",
         "country": "Sumer and Akkadian Empire",
-        "imageLink": "images/the-epic-of-gilgamesh.jpg",
+        "imageLink": "images/theEpicOfGilgamesh.jpg",
         "language": "Akkadian",
         "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
         "pages": 160,
@@ -44,7 +44,7 @@ const books = [
     {
         "author": "Unknown",
         "country": "Achaemenid Empire",
-        "imageLink": "images/the-book-of-job.jpg",
+        "imageLink": "images/theBookOfJob.jpg",
         "language": "Hebrew",
         "link": "https://en.wikipedia.org/wiki/Book_of_Job\n",
         "pages": 176,
@@ -80,13 +80,22 @@ function spawnData(Data) {
 
         let p1 = document.createElement("p")
         p1.setAttribute("class", "location")
-
         p1.appendChild(document.createTextNode(d.country))
 
+        let img = document.createElement('img');
+        img.setAttribute("src","./assets/" + d.imageLink)
+        img.setAttribute("alt",d.title)
+
+        let a = document.createElement('a');
+        a.appendChild(document.createTextNode("wiki"))
+        a.setAttribute("href",d.link)
+        
         div.appendChild(h1)
+        div.appendChild(img)
         div.appendChild(h2)
         div.appendChild(p1)
-
+        div.appendChild(a)
+        
         container.appendChild(div)
     }
 }
@@ -101,8 +110,10 @@ function spawnDataTemplate(Data) {
     for (const d of Data) {
         let templateStr = `<div class="book">
                                 <h1 class="tittle">${d.title}</h1>
+                                <img src="${"./assets/" + d.imageLink}">
                                 <h2 class="author">${d.author}</h2>
                                 <p class="location">${d.country}</p>
+                                <a href="${d.link}">wiki</a>
                             </div>`
         container.innerHTML += templateStr
     }
