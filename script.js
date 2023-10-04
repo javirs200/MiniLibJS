@@ -34,7 +34,7 @@ const books = [
     {
         "author": "Unknown",
         "country": "Sumer and Akkadian Empire",
-        "imageLink": "images/theEpicOfGilgamesh.jpg",
+        "imageLink": "images/epicGilgamesh.jpg",
         "language": "Akkadian",
         "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
         "pages": 160,
@@ -44,7 +44,7 @@ const books = [
     {
         "author": "Unknown",
         "country": "Achaemenid Empire",
-        "imageLink": "images/theBookOfJob.jpg",
+        "imageLink": "images/bookOfJob.jpg",
         "language": "Hebrew",
         "link": "https://en.wikipedia.org/wiki/Book_of_Job\n",
         "pages": 176,
